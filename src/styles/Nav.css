@@ -1,104 +1,106 @@
-.mainDiv{
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    right: 0px;
-    top: 0px;
-
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px, rgba(0, 0, 0, 0.09) 0px 32px 16px 0px;
-    display: flex;
- 
-    align-items: center;
-    backdrop-filter: blur(10px);
+:root {
+  --color: rgb(111, 0, 255);
 }
-.imageDiv{
-    width: 78px;
-    height: 67px;
+.mainDiv {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
 
-    border-radius: 100px;
-    background-color: white;
-    box-shadow: rgb(114, 114, 114) 0px 0px 10px 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px 0px;
+  display: flex;
+
+  align-items: center;
+  backdrop-filter: blur(10px);
 }
-.inputStyle{
-    width: 100%;
-    height: 36px;
-    border-radius: 22px;
-    padding: 10px;
-    font-size: 20px;
-    color: #5c5757;
-    border: 0px;
-    box-shadow: rgb(114, 114, 114) 0px 0px 10px 0px inset;
+.imageDiv {
+  width: 78px;
+  height: 56px;
+  border-radius: 100px;
+  background-color: white;
+  box-shadow: rgb(114, 114, 114) 0px 0px 10px 3px inset;
 }
+.inputStyle {
+  width: 100%;
+  height: 36px;
 
-.navDivstyle{
-    justify-content: space-evenly;
-
-    display: flex; 
-    width: 100%;
-    align-items: center;
-
-}
-.cartDiv{
-
-    width: 40%;
-    height: 70px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.listName{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    width: 340px;
-    align-content: center;
-
-}
-.listStyle{
-    text-decoration: none ;
-    color: rgba(0, 0, 0, 0.448);
-    cursor:pointer; 
-    font-size: 20px;
-    /* border: solid; */
-    padding: 20px;
-    width: 100px;
+  /* border: solid var(--color); */
+  border-radius: 22px;
+  padding: 10px;
+  font-size: 20px;
+  color: #5c5757;
+  border: 0px;
+  box-shadow: rgb(114, 114, 114) 0px 0px 10px 0px inset;
 }
 
-.inputDiv{
-    width: 38%;
+.navDivstyle {
+  justify-content: space-evenly;
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.cartDiv {
+  width: 40%;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.listName {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 340px;
+  align-content: center;
+}
+.listStyle {
+  text-decoration: none;
+  color: rgb(0 0 0 / 80%);
+  cursor: pointer;
+  font-size: 20px;
+  /* border: solid; */
+  padding: 10px 10px;
+  width: 100px;
+}
+
+.inputDiv {
+  width: 38%;
 }
 
 .listStyle:hover {
-    transition: 0.1s color;
-    color: blue;
-    border-radius: 40px;
-    box-shadow: rgb(114, 114, 114) 0px 0px 10px 0px inset;
-    background-color: white;
-    transition-delay: 0.3s;
+  transition: 0.1s color;
+  color: blue;
+  border-radius: 40px;
+  box-shadow: rgb(114, 114, 114) 0px 0px 10px 0px inset;
+  background-color: white;
+  transition-delay: 0.3s;
 }
 @media only screen and (max-width: 950px) {
-    .cartDiv{
+  .cartDiv {
     width: 40%;
-    }
-  
-    #listStyle_id_2{
-        display: none;
-    }
+  }
+
+  #listStyle_id_2 {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 750px) {
-    
-    .cartDiv , .inputDiv {
-        display: none;
-    }
-    
-    .mainDiv{
-        justify-content: center; 
-    }
-    #listStyle_id_1{
-        display: none;
-    }
-    .navDivstyle{
-        justify-content: center;
-    }
+  .cartDiv,
+  .inputDiv {
+    display: none;
+  }
+
+  .mainDiv {
+    justify-content: center;
+  }
+  #listStyle_id_1 {
+    display: none;
+  }
+  .navDivstyle {
+    justify-content: center;
+  }
 }

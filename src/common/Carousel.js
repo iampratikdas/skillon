@@ -7,7 +7,7 @@ return(
         <div id={"div1"}>
 
         </div>
-        <div id={"div2"}>
+        <div id={"div2"} data-color="red">
          <img src={homeImage} />
         </div>
         </div>
