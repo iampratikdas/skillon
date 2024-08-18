@@ -1,0 +1,35 @@
+.mainDivCarousel {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 500px;
+  background-image: url("/assets/homepageimage1.jpg");
+  display: flex;
+  flex-direction: row;
+  margin: 100px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // border: solid;
+  .headerBanner {
+    width : 50%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // border: solid;
+    h1 {
+      font-size: 38px;
+      font-weight: 50;
+    }
+    p{
+      margin: 5px 0px;
+      width: 70%;
+    }
+  }
+
+  #div2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes sure the image covers the container without stretching */
+  }
+}

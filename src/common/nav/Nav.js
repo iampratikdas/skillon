@@ -1,23 +1,23 @@
-import "../../styles/Nav.css";
+import styles from "@/styles/nav.module.scss";
 import Content from "./Content";
-import Logo from "../../assets/logo.svg";
+
 
 export default function Nav(){
     return (
         <>
-        <div className={"mainDiv"}>
+        <div className={styles.mainDiv}>
         {/* <Content /> */}
-        <div className="navDivstyle">
+        <div className={styles.navDivstyle}>
            
-            <img src={Logo} className={"imageDiv"} alt="logo" />
+            <img src="/assets/logo.svg" className={styles.imageDiv} alt="logo" />
             
-            <div className={"inputDiv"}>
-            <input type="text"  className="inputStyle"  placeholder="Search your Skill here ..." />
+            <div className={styles.inputDiv} >
+            <input type="text"  className={styles.inputStyle} placeholder="Search your Skill here ..." />
             </div>
-            <div className={"cartDiv"}>
-            <ol className={"listName"}>
-                <li><a id={"listStyle_id_1"} href="/" className={"listStyle"} >Category</a></li>
-                <li><a id={"listStyle_id_2"} href="/" className={"listStyle"}  >Teach on SkillOn</a></li>
+            <div className={styles.cartDiv}>
+            <ol className={styles.listName}>
+                <li><a id={styles.listStyle_id_1} href="/" className={styles.listStyle} >Category</a></li>
+                <li><a id={styles.listStyle_id_2} href="/" className={styles.listStyle} >Teach on SkillOn</a></li>
                 {/* <li>Teach on SkillOn</li> */}
             </ol>
             

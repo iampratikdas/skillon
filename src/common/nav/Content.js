@@ -1,4 +1,4 @@
-import "../../styles/Nav.css";
+import "@/styles/nav.module.scss";
 const content_list = [
     {
         title : "logo",
