@@ -14,38 +14,38 @@ const Contents = ({ header }) => {
     {
       src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
       title: "Mountain view",
-      description: "3.98M views"
+      description: "3.98M views",
     },
     {
       src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
       title: "Mountain view",
-      description: "3.98M views"
+      description: "3.98M views",
     },
     {
       src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
       title: "Mountain view",
-      description: "3.98M views"
+      description: "3.98M views",
     },
     {
       src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
       title: "Mountain view",
-      description: "3.98M views"
+      description: "3.98M views",
     },
     {
       src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
       title: "Mountain view",
-      description: "3.98M views"
+      description: "3.98M views",
     },
     {
       src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
       title: "Mountain view",
-      description: "3.98M views"
+      description: "3.98M views",
     },
     {
       src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
       title: "Mountain view",
-      description: "3.98M views"
-    }
+      description: "3.98M views",
+    },
     // {
     //   src: "https://images.unsplash.com/photo-1532614338840-ab30cf10ed36",
     //   title: "Mountain view",
@@ -84,10 +84,6 @@ const Contents = ({ header }) => {
   const handlePrev = () => {
     console.log("handlePrev", carouscount, carouscount - itemsPerPage <= 0);
     if (carouscount - itemsPerPage <= 0) {
-      // if (carouscount === 0) {
-      //   setCarouscount(data.length - itemsPerPage);
-      // } else {
-      // }
       setCarouscount(0);
     } else {
       setCarouscount(carouscount - itemsPerPage);
@@ -104,12 +100,12 @@ const Contents = ({ header }) => {
       <div className={styles.container}>
         <button onClick={handlePrev}>Prev</button>
         <div className={styles.contentCarouselMainDiv}>
-          <div id="contentWRapper1" className={styles.contentWRapper}>
+          <div className={styles.contentWRapper}>
             {data.map((items, index) => (
               <div
                 style={{
                   transform: `translateX(-${carouscount * (100 / itemsPerPage)}%)`,
-                  transition: "transform 0.5s ease-in-out"
+                  transition: "transform 0.5s ease-in-out",
                 }}
                 key={carouscount + index}
                 ref={(element) => (ref.current[carouscount + index] = element)}
@@ -119,17 +115,6 @@ const Contents = ({ header }) => {
                 This is div {index}
               </div>
             ))}
-
-            {/* {(() => {
-              if (carouscount + 1 === data.length) {
-                return (
-                  <div key={0} ref={(element) => (ref.current[0] = element)} className={styles.moleculesDiv}>
-                    <img src={data[0].src} alt={data[0].title} />
-                    This is div {0}
-                  </div>
-                );
-              }
-            })()} */}
           </div>
         </div>
         <button onClick={handleNext}>Next</button>

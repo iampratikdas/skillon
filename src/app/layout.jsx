@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.scss";
 import Nav from "@/common/nav/Nav";
 const inter = Inter({ subsets: ["latin"] });
+import "@fontsource/inter";
 
 export const metadata = {
   title: "Skill On Application",
@@ -11,9 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+      </head>
       <body className={inter.className}>
         <Nav />
-        <div style={{ width: "90%" }}>{children}</div>
+        <div style={{ width: "90%", border: "1px solid" }}>{children}</div>
       </body>
     </html>
   );
